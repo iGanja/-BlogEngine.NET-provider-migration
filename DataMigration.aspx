@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" CodeBehind="BlogMigration.aspx.cs" Inherits="BlogEngine.NET.admin.Pages.BlogMigration" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true" CodeBehind="DataMigration.aspx.cs" Inherits="BlogEngine.NET.admin.Pages.DataMigration" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdmin" Runat="Server">
     <p>
@@ -22,9 +22,8 @@
     </p>
     <p>May the force be with you.</p>
     <hr />
+    Copy Data From: <asp:DropDownList ID="DdlBlogs" runat="server" /><br /><br />
     Copy Data to: <asp:DropDownList ID="DdlProviders" runat="server" /><br /><br />
     <asp:Button ID="BtnConvert" runat="server" Text="Copy" OnClick="BtnConvert_OnClick" /><br />
     <asp:Label ID="LblStatus" Text="" ForeColor="Red" runat="server" />
 </asp:Content>
-
-
