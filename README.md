@@ -44,7 +44,7 @@ something does go horribly wrong, you'll be upset if you skipped this step.
 2. Check Version
 
 This process is only for people who are using BlogEngine.NET 1.4.5 or greater. In addition, if you are moving to a database (especially 
-SQLite or MySQL) you are strongly recommended to upgrade to 1.4.5.5 or greater or install this simple patch to your 1.4.5.0 blog. (The 
+SQLite or MySQL) you are strongly recommended to upgrade to 1.4.5.5 or greater or <a href="http://nyveldt.com/blog/files/media/DbProviderUpdateFor1.4.5.zip" target="_blank">install this simple patch</a> to your 1.4.5.0 blog. (The 
 patch is not official either, but has the important DbProvider update in it.)
 
 3. Set up the new provider
