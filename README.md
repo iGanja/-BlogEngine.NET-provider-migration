@@ -103,7 +103,6 @@ DELETE FROM be_Categories<br>
 DELETE FROM be_Pages<br>
 DELETE FROM be_Settings<br>
 DELETE FROM be_PingService<br>
-DELETE FROM be_Blogs
 
 If you are moving data into XML, you'll want to clear out your App_Data\Posts folder and your App_Data\Pages folder.
 Be sure not to delete your existing blog data by accident.
@@ -132,7 +131,19 @@ You can optionally remove your old data if you'd like after you are sure everyth
 9. Update your users, extension, and widget data
 
 As mentioned above, you'll need to set your users back up and change passwords. Also any extension and widget data is lost and will 
-need to be re-entered. Other than that, you are done.
+need to be re-entered. Other than that, you are done. You can usually copy the encrypted password string from the original xml files to the new database to retain the original passwords.
+
+10. Update your static data tables with the new BlogId
+
+There are a few tables that are not updated, and you will need to Update all records with the new BlogId. For example:
+
+UPDATE <table_name> SET BlogId = 'your BlogId guid'
+
+Once you have all the tables cleaned up and pointing to your new BlogId, you can then delete the original Blog record.
+
+DELETE FROM be_Blogs WHERE BlogId = 'the original BlogId guid'
+
+If you have multiple blogs in the same database, you can certainly use this tool, but here is where I tell you get all settings tables fixed with the first blog, before you move on to the others.
 
 Troubleshooting
 
@@ -148,3 +159,4 @@ situation, you simply need to expand the field size, clear the destination, and 
 
 USE AT YOUR OWN RISK!<br>
 Back everything up before starting!
+Good luck!
