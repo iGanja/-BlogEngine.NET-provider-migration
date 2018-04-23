@@ -94,15 +94,16 @@ you first installed.
 You need to delete the data in your destination Provider otherwise the migration will fail. If you have a database, this means you can 
 run a script that looks something like this:
 
-DELETE FROM be_PostCategory;<br>
-DELETE FROM be_PostComment;<br>
-DELETE FROM be_PostNotify;<br>
-DELETE FROM be_PostTag;<br>
-DELETE FROM be_Posts;<br>
-DELETE FROM be_Categories;<br>
-DELETE FROM be_Pages;<br>
-DELETE FROM be_Settings;<br>
-DELETE FROM be_PingService;<br>
+DELETE FROM be_PostCategory<br>
+DELETE FROM be_PostComment<br>
+DELETE FROM be_PostNotify<br>
+DELETE FROM be_PostTag<br>
+DELETE FROM be_Posts<br>
+DELETE FROM be_Categories<br>
+DELETE FROM be_Pages<br>
+DELETE FROM be_Settings<br>
+DELETE FROM be_PingService<br>
+DELETE FROM be_Blogs
 
 If you are moving data into XML, you'll want to clear out your App_Data\Posts folder and your App_Data\Pages folder.
 Be sure not to delete your existing blog data by accident.
